@@ -1,9 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from keras.models import Sequential
-from keras.layers.core import Activation
-from keras.layers.core import Flatten
-from keras.layers.core import Dense
+from keras.layers import Activation, Flatten, Dense
+
 import time
 
 ## payoffs of a vanilla call and put
@@ -79,6 +78,7 @@ def DNN_pricing(paths, T, r, K, payoff):
     tau = np.full((M,N+1), N)
     j=N-1
     while j>=1:
+        print(j)
         model,history = approximation(j,tau,paths,payoff)
         for m in range(M):
             phi = discountedPayoffAtn(payoff, j, r, paths[m,j], K, T, N)
