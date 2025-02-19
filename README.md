@@ -59,7 +59,7 @@ This file extends the LSMC approach to handle multi-dimensional underlying asset
     pip install numpy matplotlib keras
     ```
 
-To run the project, you can execute any of the Python files. For example, to run the Cox-Ross-Rubinstein binomial model, use the following command:
+To run the project, you can execute any of the Python files as described in the previous dection.
 
 ## References
 
